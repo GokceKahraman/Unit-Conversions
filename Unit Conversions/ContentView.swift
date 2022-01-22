@@ -177,6 +177,7 @@ struct ContentView: View {
                             Text( "\(inputUnitTemps[$0])")
                         }
                     }.pickerStyle(SegmentedPickerStyle())
+                    
                     Picker("Output Unit -" , selection: $outputUnitTempValue){
                         ForEach(0..<outputUnitTemps.count){
                             Text( "\(outputUnitTemps[$0])")
