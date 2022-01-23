@@ -171,7 +171,7 @@ struct ContentView: View {
         NavigationView{
             Form{
                 Section(header: Text("Temperature Conversion")){
-                    TextField("Enter Teprerature", text: $inputTemp)
+                    TextField("Enter Teprerature", text: $inputTemp).keyboardType(.decimalPad)
                     Picker("Input Unit -" , selection: $inputUnitTempValue){
                         ForEach(0..<inputUnitTemps.count){
                             Text( "\(inputUnitTemps[$0])")
@@ -192,7 +192,7 @@ struct ContentView: View {
                 
                 
                 Section(header: Text("Lenght Conversion")){
-                    TextField("Enter Lenght", text: $inputLenght)
+                    TextField("Enter Lenght", text: $inputLenght).keyboardType(.decimalPad)
                     Picker("Input Lenght-" , selection: $inputUnitLenght){
                         ForEach(0..<inputUnitLenghts.count){
                             Text( "\(inputUnitLenghts[$0])")
@@ -213,7 +213,7 @@ struct ContentView: View {
                 
                 
                 Section(header: Text("Time Conversion")){
-                    TextField("Enter Time", text: $inputTime)
+                    TextField("Enter Time", text: $inputTime).keyboardType(.decimalPad)
                     Picker("Input Time -", selection: $inputTime){
                         ForEach(0..<inputUnitTimes.count){
                             Text("\(inputUnitTimes[$0])")
@@ -234,7 +234,7 @@ struct ContentView: View {
                 
                 
                 Section(header: Text("Volume Conversion")){
-                    TextField("Enter Volume", text: $inputVolume)
+                    TextField("Enter Volume", text: $inputVolume).keyboardType(.decimalPad)
                     Picker("Input Volume -", selection: $inputVolume){
                         ForEach(0..<inputUnitVolumes.count){
                             Text("\(inputUnitVolumes[$0])")
@@ -250,7 +250,7 @@ struct ContentView: View {
                     Text(inputVolumeUnitAfterConversation)
                 }
             }
-        }.navigationTitle("Unit Converter")
+        }.navigationTitle("Converter")
     }
 }
 
